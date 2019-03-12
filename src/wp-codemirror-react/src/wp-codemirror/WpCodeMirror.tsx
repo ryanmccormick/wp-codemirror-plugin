@@ -10,16 +10,8 @@ import 'codemirror/mode/php/php';
 import 'codemirror/mode/sql/sql';
 import 'codemirror/theme/darcula.css';
 
+import { WpCodeMirrorProps } from './wp-code-mirror.props';
 import './WpCodeMirror.css';
-
-class WpCodeMirrorProps {
-  lang: string;
-  line: number;
-  codeBlock: string;
-}
-
-class WpCodeMirrorState {
-}
 
 class WpCodeMirror extends React.Component {
 
@@ -30,20 +22,16 @@ class WpCodeMirror extends React.Component {
   };
 
   props: WpCodeMirrorProps;
-  state: WpCodeMirrorState;
   elementRef: HTMLDivElement;
   codeMirrorInstance: Editor;
 
   constructor(props: WpCodeMirrorProps) {
     super(props);
-    this.state = {};
-
     this.initCodeMirror = this.initCodeMirror.bind(this);
   }
 
   componentDidMount(): void {
     this.initCodeMirror(this.elementRef);
-    console.log(this.props.lang);
   }
 
   initCodeMirror(hostElement: HTMLElement): void {
