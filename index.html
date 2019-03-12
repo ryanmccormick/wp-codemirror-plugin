@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>DEMO</title>
+
+        <link rel="stylesheet" href="wp-codemirror-plugin/static/css/wp-codemirror-plugin.css">
+    </head>
+    <body>
+        <h1>Demo Site</h1>
+        <hr>
+        <pre lang="vb" line="1">Sub getFieldNamesFromTable(targetTable As String)
+    Dim db As DAO.Database
+    Dim rs As DAO.Recordset
+    Dim strSQL As String
+
+    Set db = CurrentDb
+
+    strSQL = "SELECT TOP 1 * FROM " &amp; targetTable
+
+    Set rs = db.OpenRecordset(strSQL)
+
+    For Each fName In rs.Fields
+        Debug.Print fName.Name
+    Next fName
+
+    'Do While Not rs.EOF
+
+    'Loop
+
+    db.Close
+    Set db = Nothing
+    Set rs = Nothing
+End Sub
+</pre>
+
+        <script src="wp-codemirror-plugin/static/js/wp-codemirror-plugin.js"></script>
+    </body>
+</html>

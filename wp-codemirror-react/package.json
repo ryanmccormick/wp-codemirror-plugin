@@ -1,0 +1,36 @@
+{
+  "name": "wp-codemirror-react",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "codemirror": "^5.44.0",
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4",
+    "react-scripts": "2.1.8",
+    "typescript": "3.3.3333"
+  },
+  "devDependencies": {
+    "@types/codemirror": "0.0.72",
+    "@types/jest": "24.0.11",
+    "@types/node": "11.11.1",
+    "@types/react": "16.8.7",
+    "@types/react-dom": "16.8.2",
+    "rewire": "^4.0.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "./bin/build.js",
+    "build:old": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}
